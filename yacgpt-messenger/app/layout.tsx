@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import SideBar from '@/components/SideBar'
 
 export const metadata = {
   title: 'Next.js',
@@ -14,8 +15,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className='flex'>
-        {/* {sidebar}
-        {ClientPRovider} */}
+          <div className='bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[20rem]'>
+          <SideBar />
+          </div>
+   
+        {/* {ClientPRovider} */}
 
           <div className='bg-[#343541] flex-1'>{children}</div>
           </div>
