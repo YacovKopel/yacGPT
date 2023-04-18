@@ -4,6 +4,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
+import toast from "react-hot-toast";
 
 type Props = {
   chatId: string;
@@ -12,6 +13,9 @@ type Props = {
 function ChatInput({ chatId }: Props) {
   const [prompt, setPrompt] = useState("");
   const {data:session} =useSession();
+//   use SWR to get model
+const model="text-davinci-003"
+
   const sendMessage= async(e:FormEvent<HTMLFormElement>) =>{
 e.preventDefault()
 if (!prompt)return
@@ -26,9 +30,26 @@ const message: Message={
         avatar:session?.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name}`
     }
 }
-
+// send messages to firebase
 await addDoc(collection(db,'users', session?.user?.email!,'chats',chatId),message)
 
+const notification=toast.loading('YacGPT is thinking...')
+
+
+// fetch method to backend to comminucate with API
+await fetch ('/api/askQuestion',{
+    method:'POST',
+    headers: {
+        'Content-Type':'application/json'
+    },
+    body: JSON.stringify({
+        prompt: input, chatId, model, session
+    })
+}).then(()=> {
+toast.success('YacGPT has responded!', {
+    id:notification,
+})
+})
   }
 
   return (
