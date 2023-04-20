@@ -19,7 +19,7 @@ export default async function handler(
   
  const modelOptions = models.map((model)=>({
     value:model.id,
-    labe: model.id,
+    label: model.id,
  }));
 
   res.status(200).json({ modelOptions})
