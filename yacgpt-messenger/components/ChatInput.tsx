@@ -4,7 +4,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
-import toast from "react-hot-toast";
+import {toast} from "react-hot-toast";
 
 type Props = {
   chatId: string;
@@ -16,11 +16,13 @@ function ChatInput({ chatId }: Props) {
 //   use SWR to get model
 const model="text-davinci-003"
 
-  const sendMessage= async(e:FormEvent<HTMLFormElement>) =>{
+  const sendMessage= async (e:FormEvent<HTMLFormElement>) =>{
 e.preventDefault()
 if (!prompt)return
+
 const input = prompt.trim();
 setPrompt('');
+
 const message: Message={
     text:input,
     createdAt: serverTimestamp(),
@@ -31,19 +33,19 @@ const message: Message={
     }
 }
 // send messages to firebase
-await addDoc(collection(db,'users', session?.user?.email!,'chats',chatId),message)
+await addDoc(collection(db,'users', session?.user?.email!,'chats',chatId, 'messages'),message)
 
 const notification=toast.loading('YacGPT is thinking...')
 
 
-// fetch method to backend to comminucate with API
+// fetch method to backend to comminute/query with API
 await fetch ('/api/askQuestion',{
     method:'POST',
     headers: {
         'Content-Type':'application/json'
     },
     body: JSON.stringify({
-        prompt: input, chatId, model, session
+        prompt: input, chatId, model, session,
     })
 }).then(()=> {
 toast.success('YacGPT has responded!', {
@@ -54,7 +56,7 @@ toast.success('YacGPT has responded!', {
 
   return (
     <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm">
-      <form onSubmit={sendMessage} className="p-5 space-x-5 flex-1">
+      <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
         <input
           className="bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300"
           disabled={!session}

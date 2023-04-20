@@ -13,4 +13,4 @@ if (!getApps().length){
 
 const adminDb =admin.firestore();
 
-export default {adminDb};
+export {adminDb};

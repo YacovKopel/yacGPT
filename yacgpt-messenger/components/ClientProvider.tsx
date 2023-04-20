@@ -1,7 +1,7 @@
 'use client'
 import { Toaster } from "react-hot-toast";
 
-function ClientProvider () {
+export default function ClientProvider () {
     return(
 
 <>
@@ -9,8 +9,6 @@ function ClientProvider () {
 
 </>
     )
-}
-
-export default ClientProvider;
+};
 
 
