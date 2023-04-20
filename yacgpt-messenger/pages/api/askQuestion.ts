@@ -1,5 +1,5 @@
-import { query } from 'firebase/firestore'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import query from '@/lib/queryApi'
 
 type Data = {
   answer: string
@@ -21,6 +21,9 @@ export default async function handler(
   // CHATGPT Query
 const response= await query(prompt, chatId, model)
 
-
+const message : Message={
+  text:response||"YacGPT couldnt find an answer for that",
+  admin
+}
   res.status(200).json({ name: 'John Doe' })
 }

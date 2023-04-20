@@ -12,5 +12,7 @@ const query =async (prompt: string, chatId:string, model:string)=> {
     
     }).then((res)=>res.data.choices[0].text)
         .catch((err)=>`YacGPT was unable to find an answer or that! (Error ${err.message})`)
-
+return res;
 }
+
+export default query;
