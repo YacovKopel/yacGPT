@@ -5,6 +5,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
 import {toast} from "react-hot-toast";
+import ModelSelection from "./ModelSelection";
 
 type Props = {
   chatId: string;
@@ -72,7 +73,9 @@ toast.success('YacGPT has responded!', {
           <PaperAirplaneIcon className="h-4 w-4 -rotate-45" />
         </button>
       </form>
-      <div></div>
+      <div className="md:hidden">
+        <ModelSelection/>
+      </div>
     </div>
   );
 }

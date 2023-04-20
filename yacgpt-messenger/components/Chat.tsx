@@ -24,6 +24,7 @@ const [messages] =useCollection(session && query(
 
     return(
         <div className="flex-1 overflow-y-auto overflow-x-hidden">
+            {/* If NewChat is empty */}
             {messages?.empty &&(
                 <>
                 <p className="mt-10 text-white text-center">
