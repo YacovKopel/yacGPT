@@ -3,18 +3,6 @@
   publish = "out"
   functions = "functions"
 
-[build.environment]
-  # Set your environment variables here
-  NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=YK102702050
-GOOGLE_ID=731879961014-3428u8ekt9chbmqg860nea467c4kkvdv.apps.googleusercontent.com
-GOOGLE_SECRET=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
-
-OPENAI_API_KEY=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
-
-FIREBASE_SERVICE_ACCOUNT_KEY={ "type": "service_account", "project_id": "yacgpt-messenger", "private_key_id": "dbf1d228cf94249160246acfaa482fbef0e97c7a", "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDW8PIvxJFLWyHq\nUE50+o0kQGMr5XMj8vF7x6LpAoMnLiLhw5So6JpktP7o3fb8zZkzY1un+UF+L5Io\nD2ApMHwJx0GhHQEpM39hrXJOYpb/T0nVo5yh+bxPhGJg5pRPipoNCAUGhPJhTkBt\nDBLaqIWUP9lOGtWBDDaBLWBRJzHQyZTD5RFW6NQQ9iuYOgSEmbt/IsjGGJsuwezr\nKy2RZRUoDoqwSU4bSjh1glGtxQmgqKJl2e2kp1wOKFwmpJ53+BD9GmhhzfAbKmfU\n8vfQkOUkmSVJaN5GrGxtDh8JvDu34s+zdCjTZxiOv8zSm485crYTHoBWxtvzl3c6\n+7U1qcyzAgMBAAECggEACYuozctGgpi5AF1xpotMAlyjqtrlSqbq54rdpsh4R6Cq\nZulXLEssNCW/nlrhMaf10kzq0KJmsLJvJL1OEXY4Q/zn4r5Vg11onk9kIKwLNapx\nRn4eIiljngpsjg4fbwriPYrqIjh8RSsC/HTJT5GlYQiW33ucmL8QmpsHyILbmQCN\n9CMkq5Rs57YdxLy1DF9+NwcMSz2Z4/kReJ+4xtO13rT62Y6/pUa2z6GqEHbALzyB\nhvoJKs/16totcKufRXCtbNLBswnJlJtp6HfNkgILWyUBxZZLrDI6duR90Uw4zZZu\ndu7feCJVpJTPVe2ZD8o3i0+Y4OqZ2GcINVFspfZ18QKBgQDzA2M/gH/iA9s03XQY\nQrULpygmUnrBeyZ3HqgXVzd2GX9imna9QE6neFUormxcqqQx+SUohkYeTE/LeTuP\nD8o7oH46mOZHOYTIqK+jAetTEMNhUMl4SfXX5EXtmJh3IE/j4aZAtZpXuSjoIfAs\niMp78r9Ossr3D04raJEG2i4lsQKBgQDibYLCme5KTe2UXLRwL7n50GQ+PiXSLLpt\nEv4xI093tAUwvul1+3OIVrgdmH8ZlussFVCeKroDlwCaoURMk2oj3RmPZD0k0ptU\nVOF5rZCPjdgPTGVpX85QiFiZxyiYwxeZreNVOhhqjjdVvQiIhYiTtWc5r/3wJmWn\nF0aT2R7dowKBgHWABdUGhM77nloJWcEBQBjKUhd1efVjXk3qfMwMV7y6x2Ud2pvX\nJDDFdiedbre/qnSfSuA1TGIJ8+smSy35LId4KpCarX1yyklbhtECdI5NZKsBLOkE\nmeIxdb5UMiQnc3lz+bcAGAiidq0G++IMohscXHPo70pWFC3Y+YaeqAGBAoGBAI38\nLerpq8tcYoaOO3e99dj5HGMLhZvuAFk1d8BIbCSb9kVC8hLRwvjTqFCmt8zMHlxe\nYVdNY6esoOxWBAYgyoYCt2x7ZvwYNN8E+v7aH7RlNf8h4NXbBfzqAuUrRgHFFJ+B\nsvRWocjvtTNGfntdgO9e6YP7IDnfWg8VQWSk2f4RAoGAQeyMn/fvntjNhS5ng5UI\ne0gswwFDbcEQDi4E8vab/+MJm4fGGCHKq2YbqZNPzslmHIZHL7HZbu3Lnma2Ws2T\nYFrye8BE8oTXtrlWwUpaJRnmG/mn6CsY+a6q3tTdhZtb+8bO5PqDH6RgI4ucBODn\nx2WT4AQFmJ/iLfNwgWH40tA=\n-----END PRIVATE KEY-----\n", "client_email": "firebase-adminsdk-vcx3r@yacgpt-messenger.iam.gserviceaccount.com", "client_id": "100323596289195001122", "auth_uri": "https://accounts.google.com/o/oauth2/auth", "token_uri": "https://oauth2.googleapis.com/token", "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs", "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-vcx3r%40yacgpt-messenger.iam.gserviceaccount.com" } 
-  OPENAPI_BASE_URL = "https://your-openapi-server.com"
-
 # Redirects
 [[redirects]]
   from = "/api/*"
