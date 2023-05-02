@@ -15,11 +15,11 @@ function Homepage() {
             <h2>Examples</h2>
           </div>
           <div className="space-y-2">
-            <p className="infoText">Explain SOmething To me</p>
+            <p className="infoText">Explain the lifecycle of a caterpillar</p>
             <p className="infoText">
               What is the difference between a dog and cat?
             </p>
-            <p className="infoText">What is the color of the sun</p>
+            <p className="infoText">What is the color of the sun?</p>
           </div>
         </div>
         <div>
@@ -28,11 +28,11 @@ function Homepage() {
             <h2>Examples</h2>
           </div>
           <div className="space-y-2">
-            <p className="infoText">Explain SOmething To me</p>
+            <p className="infoText">Type a loop Function</p>
             <p className="infoText">
-              What is the difference between a dog and cat?
+              create a table that will help me keep track of my finances.
             </p>
-            <p className="infoText">What is the color of the sun</p>
+            <p className="infoText">the square root of 64</p>
           </div>
         </div>
         <div>
@@ -41,11 +41,13 @@ function Homepage() {
             <h2>Examples</h2>
           </div>
           <div className="space-y-2">
-            <p className="infoText">Explain SOmething To me</p>
+            <p className="infoText">Summarize the the Harry Potter series</p>
             <p className="infoText">
-              What is the difference between a dog and cat?
+              Give me a recipe for the best Mac n Cheese.
             </p>
-            <p className="infoText">What is the color of the sun</p>
+            <p className="infoText">
+              What workout should i do to get a bigger chest?
+            </p>
           </div>
         </div>
       </div>
