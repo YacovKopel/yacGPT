@@ -12,7 +12,9 @@ function ModelSelection () {
 
     return(
   <div className=" mt-2">
-    <Select className="mt-2"
+    <Select 
+    className="mt-2"
+    instanceId="model-selection" // add unique instanceId prop
     options={models?.modelOptions}
     defaultValue={model}
     placeholder={model}

@@ -1,16 +1,6 @@
 [build]
-  command = "next build"
-  publish = "out"
-  functions = "functions"
+  command = "npm run build"
+  publish = ".next"
 
-# Redirects
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-# Rewrite all other routes to the index.html file
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

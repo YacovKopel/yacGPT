@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import SideBar from '@/components/SideBar'
 import { SessionProvider } from '../components/SessionProvider'
-import { getServerSession, Session } from 'next-auth'
+import { getServerSession } from 'next-auth'
 import { authOptions } from '@/pages/api/auth/[...nextauth]'
 import Login from '@/components/Login'
 import ClientProvider from '@/components/ClientProvider'
