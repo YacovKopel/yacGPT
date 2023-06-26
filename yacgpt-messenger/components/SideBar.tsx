@@ -6,6 +6,7 @@ import { useSession, signOut } from "next-auth/react";
 import NewChat from "./NewChat";
 import ChatRow from "./ChatRow";
 import ModelSelection from "./ModelSelection";
+import Image from "next/image";
 
 function SideBar() {
   const { data: session } = useSession();
@@ -39,7 +40,9 @@ function SideBar() {
         </div>
       </div>
       {session && (
-        <img
+        <Image
+        width={20}
+        height={20}
           onClick={() => signOut()}
           src={session.user?.image!}
           alt="Profile picture"
